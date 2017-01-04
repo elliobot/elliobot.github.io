@@ -1,0 +1,438 @@
+<!doctype html>
+
+<html>
+<body>
+<head>
+
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.10.2.js">
+</script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js">
+</script>
+
+
+<script type="text/javascript">
+
+
+$(function() {
+
+	$('.details').draggable({
+
+	})
+	$('section').draggable({
+		revert: true,
+	})
+	$('.design').draggable({
+		revert: true,
+		cursor: "move", cursorAt: { top: 200, left: 400 },
+		stack: 'img'
+	});
+	
+	$(".Details").show();
+	$("#Education").hide();
+	$("#Skills").hide();
+	$("#Employment").hide();
+	$("#Hobbies").hide();
+	$("#Designs").hide();
+	$("#detailsbtn").click(function(){
+		$("#mepic").show();
+		$(".Details").show();
+		$("#Education").hide();
+		$("#Skills").hide();
+		$("#Employment").hide();
+		$("#Hobbies").hide();
+		$("#Designs").hide();
+	})
+	$("#educationbtn").click(function(){
+		$("#mepic").hide();
+		$(".Details").hide();
+		$("#Education").show();
+		$("#Skills").hide();
+		$("#Employment").hide();
+		$("#Hobbies").hide();
+		$("#Designs").hide();
+	})
+	$("#skillsbtn").click(function(){
+		$("#mepic").hide();
+		$(".Details").hide();
+		$("#Education").hide();
+		$("#Skills").show();
+		$("#Employment").hide();
+		$("#Hobbies").hide();
+		$("#Designs").hide();
+	})
+	$("#employmentbtn").click(function(){
+		$("#mepic").hide();
+		$(".Details").hide();
+		$("#Education").hide();
+		$("#Skills").hide();
+		$("#Employment").show();
+		$("#Hobbies").hide();
+		$("#Designs").hide();
+	})
+	$("#hobbiesbtn").click(function(){
+		$("#mepic").hide();
+		$(".Details").hide();
+		$("#Education").hide();
+		$("#Skills").hide();
+		$("#Employment").hide();
+		$("#Hobbies").show();
+		$("#Designs").hide();
+	})
+	$("#designsbtn").click(function(){
+		$("#mepic").hide();
+		$(".Details").hide();
+		$("#Education").hide();
+		$("#Skills").hide();
+		$("#Employment").hide();
+		$("#Hobbies").hide();
+		$("#Designs").show();
+	})
+})
+
+</script>
+
+<style>
+
+body {
+	background-color:#000000;
+	margin-left:10%;
+	margin-right:10%;
+
+
+}
+header{
+	text-align:center;
+	
+} 
+section {
+	background-color:#ffffff;
+	padding-top: 5px;
+	margin-bottom: 10px;
+	border-bottom: 5px solid #777777
+}
+
+#Designs img {
+	margin-bottom:20px;
+	padding: 5px;
+	align-middle;	
+	background-color:#ffd52b;
+	border-radius:10px;
+}
+#Designs img:active { 
+	width: 70%; 
+}
+header a{
+	padding-top:30px;
+	padding-left:30px;
+	padding-right:30px;
+	padding-bottom:5px;
+	
+	background-color:#ffffff;
+	border-bottom: 5px solid #777777
+	
+	
+} 
+.Details a{
+	margin-right: 600px;
+
+}
+nav{
+	text-align:center;
+	
+
+}
+ul {
+	margin-left:20px;
+}
+p {
+	margin-left:20px;
+}
+nav a{
+	text-decoration: none;
+	padding:20px;
+	padding-top:20px;
+	padding-bottom:20px;
+	background-color:#ffffff;
+	margin-right:-5px;
+	margin-top:15px;
+	border-bottom: 5px solid #777777
+} 
+
+article{
+	text-align:center;
+
+}
+#mepic{
+	margin-top: 20px;
+	padding: 5px;
+	background-color:#ffd52b;
+	position: absolute;
+	left: 40%;
+	border-radius:10px;
+}
+
+hr{
+	height: 5px;
+	border-color:#ffd52b;
+	background-color:#ffd52b;
+	border: 0 none;
+	color:#ffd52b;
+}
+
+
+/* Bounce To Right */
+.hvr-bounce-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color, background-color, border-bottom-color;
+  transition-property: color, border-bottom-color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  
+}
+.hvr-bounce-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffd52b;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-bounce-to-right:hover, .hvr-bounce-to-right:focus, .hvr-bounce-to-right:active {
+  color: white;
+  border-bottom-color: #b38f00;
+}
+.hvr-bounce-to-right:hover:before, .hvr-bounce-to-right:focus:before, .hvr-bounce-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+</style>
+
+</head>
+
+<header>
+
+<a><font size="60">Elliot Gabrel - CV</font></a>
+
+</header>
+
+<hr>
+
+<nav>
+<a href="#" id = detailsbtn class="hvr-bounce-to-right 1" >Details</a> 
+
+<a href="#" id = educationbtn class="hvr-bounce-to-right 2">Education/Qualifications</a>
+
+<a href="#" id = skillsbtn class="hvr-bounce-to-right 3">Skills</a>
+
+<a href="#" id = employmentbtn class="hvr-bounce-to-right 4">Previous Employment</a>
+
+<a href="#" id = hobbiesbtn class="hvr-bounce-to-right 5">Hobbies</a>
+
+<a href="#" id = designsbtn class="hvr-bounce-to-right 6">Designs</a>
+<br><br>
+<hr>
+</nav>
+<article>
+
+<section class = "Details">
+<a>
+<b>Mobile:</b> 07805 996 723 
+<br>
+<b>Telephone:</b> 020 8501 1183 <br>
+<b>Date Of Birth:</b> 26th March 1997 <br>
+<b>Email:</b> elliotgabrel@hotmail.com
+<br><br>
+</a>
+
+</section>
+
+<section class = "Details">
+
+<h2  id="Details"><i>Details</i></h2>
+
+<a>Friendly, hardworking, fast learner and able to communicate clearly and politely at all levels. After education I wish to work in design and development for digital software, drawing up concept ideas or creating them. What I would like to achieve from working would be to improve on drawing and general creative thinking by practising over time.  I have a good knowledge of technology and social media.  I can work efficiently and effectively, whether independently or in a team.  I enjoy helping others, good at general problem solving and can fix numerous computer issues.
+
+<br><br>
+
+</section>
+<img class = "details" id = "mepic" src="http://i.imgur.com/DMXfPqL.jpg" height="400" width="400" align="right"></img>
+
+<section id="Education">
+<h2 id="Education"><i>Education/Qualifications</i></h2>
+
+<ul>
+	<li align="left">Sixth Form at Davenant Foundation School, Loughton, Essex - Sept 2013 to July 2015</li>
+	<li align="left">King Solomon High School from Sept 2008 to July 2013</li>
+	<li align="left">Currently studying Computer Science at the University of Lincoln 2015+</li>
+</ul>
+<p align="left">3 A-Levels</p>
+<ul>
+	<li align="left">C in Maths</li>
+	<li align="left">D in Physics</li>
+	<li align="left">C in Computing</li>
+
+</ul>
+
+<p align="left">11 GCSE's</p>
+<ul>
+	<li align="left">A in Maths</li>
+	<li align="left">A in IGCSE Maths</li>
+	<li align="left">B in Physics</li>
+	<li align="left">B in ICT</li>
+	<li align="left">B in English Language</li>
+	<li align="left">C in Biology</li>
+	<li align="left">C in Design & Technology</li>
+	<li align="left">C in Geography</li>
+	<li align="left">C in Business Studies</li>
+	<li align="left">C in English Literature</li>
+	<li align="left">C in Chemistry</li>
+
+</ul>
+<br>
+
+</section>
+
+<section id="Skills">
+<h2 id="Skills"><i>Skills</i></h2>
+<ul>
+	<li align="left">Range of knowledge of computer/mobile technology.</li>
+	<li align="left">Able to pick up individual necessary skills quickly.</li>
+	<li align="left">Good knowledge of Adobe Photoshop.</li>
+	<li align="left">Programming experience in Python, C#, CSS, jQuery and Visual Basic.</li>
+	<li align="left">Scripting experience in HTML.</li>
+	<li align="left">Fast thinking.</li>
+	<li align="left">Trained in child protection as a part of a peer-mentoring scheme in Secondary School.</li>
+	<li align="left">Can draw and create in different styles: logos, pixel, cartoon, low poly and general image manipulation. </li>
+</ul>
+
+<br>
+
+</section>
+
+<section id="Employment">
+<h2><i>Previous Employment</i></h2>
+
+<ul>
+	<li align="left">Chigwell Primary School, Classroom Assistant</li>
+		<ul>
+		<li align="left">Admin assistant to the teachers, helping students in class.</li></ul>	
+	<li align="left">Dalek Operator</li>
+		<ul>
+			<li align="left">Helping with any mechanical problems, building the Dalek at the event.</li></ul>	
+	<li align="left">Pentland Brands Plc</li>
+		<ul>
+		<li align="left">Creating PowerPoints based on a research project and designing sports clothing based on objectives.</li></ul>	
+
+</ul>
+<br><br>
+
+</section>
+
+<section id="Hobbies">
+<h2 id="Hobbies"><i>Hobbies</i></h2>
+<ul>
+	<li align="left">Graphic Design</li>
+	<li align="left">Bass Guitar</li>
+	<li align="left">Acoustic Guitar</li>
+	<li align="left">Acting</li>
+	<li align="left">Computer Games</li>
+	<li align="left">Writing</li>
+	<li align="left">Drawing</li>
+	<li align="left">Reading</li>
+
+</ul>
+
+</section>
+
+<section id="Designs">
+<h2 id="Designs"><i>Designs</i></h2>
+
+<img  src="http://i.imgur.com/HZjRXzi.jpg" class="design" width ="500"></img>
+<img  src="http://i.imgur.com/MX5Pufa.jpg" class="design" width ="500"></img>
+<img  src="http://i.imgur.com/AooKm5e.png" class="design" width ="500"></img>
+<img  src="http://i.imgur.com/JwJcvas.png" class="design" width ="500"></img>
+<img  src="http://i.imgur.com/HgaYt40.png" class="design" width ="500"></img>
+<img  src="http://i.imgur.com/r5CjAAt.png" class="design" width ="500"></img>
+<img  src="http://i.imgur.com/zFYjnXJ.png" class="design" width ="500"></img>
+<img  src="http://i.imgur.com/xnVQPtu.png" class="design" width ="500"></img>
+<img  src="http://i.imgur.com/6NB2dEX.png" class="design" width ="500"></img>
+<img  src="http://i.imgur.com/R7GcdYs.png" class="design" width ="500"></img>
+
+
+</section>
+
+
+
+
+
+</a>
+
+
+
+</article>
+
+
+
+<aside>
+
+</aside>
+
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
