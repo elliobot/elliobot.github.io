@@ -373,6 +373,16 @@ iframe {
 
 }
 
+#watermark{
+	position:absolute;
+	position:fixed;
+	bottom:0;
+    right:0;
+	font-size: 15px;
+	margin-right: 10px;
+}
+
+
 /* Clear floats after the columns */
 .row:after {
     content: "";
